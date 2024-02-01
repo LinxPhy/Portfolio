@@ -4,12 +4,19 @@ function Navigation() {
 
     return (
         <nav>
-            <i className="fa-brands fa-linkedin fa-lg"></i>
-            <i className="fa-brands fa-github"></i>
+            <div className="nav-border">
+                <i className="fa-brands fa-linkedin fa-2xl"></i>
+            </div>
+            
+            <div className="nav-border">
+                <i className="fa-brands fa-github fa-2xl"></i>
+            </div>
 
-            <span className="material-symbols-rounded">
-                article
-            </span>
+            <div className="nav-border">
+                <span className=" material-symbols-rounded">
+                    article
+                </span>
+            </div>
         </nav>
     )
 

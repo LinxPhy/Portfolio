@@ -7,6 +7,7 @@
 
   --background: #202023;
   --secondary: #303035;
+  --tertiary: #aaaaaa;
 }
 
 *::before,
@@ -24,12 +25,12 @@ body{
 
 main{
   padding: 50px 0px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
 }
 
-.title{
-  padding: 40px 0px;
+section{
+  padding: 30px 0px;
 }
 
 .title h2{
@@ -62,3 +63,122 @@ main{
   border-radius: 2rem;
 }
 
+
+.description p{
+  color: var(--tertiary);
+}
+
+nav{
+  position: fixed;
+  left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+  border: 3px solid white;
+  padding: 15px;
+  border-radius: 3rem;
+}
+
+nav div{
+  width: 57px !important; 
+  height: 57px;
+  text-align: center;
+}
+
+.nav-border{
+  padding: 10px;
+  border-radius: 50%;
+  /* border: 1px solid white; */
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-border:last-child{
+  padding: 10px 6px;
+}
+
+nav span{
+  font-size: 28px !important;
+}
+
+nav div i, nav div span{
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+nav div i:hover, nav div span:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.projects{
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+}
+
+.projects > div{
+  flex-grow: 1;
+}
+
+.project .title h5{
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--tertiary);
+  padding: 10px 0px;
+}
+
+.project .description p{
+  max-width: 450px;
+  width: 100%;
+  text-align: left;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.projects .languages{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.projects .language{
+  border: 1px solid var(--tertiary);
+  padding: 5px 10px;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+} 
+
+.project{
+  /* padding: 20px; */
+  padding: 15px;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  min-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h3{
+  margin-bottom: 50px;
+}
+
+.projects div img{
+  max-width: 470px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0rem;
+  height: 150px;
+  filter: grayscale(0.3);
+}
